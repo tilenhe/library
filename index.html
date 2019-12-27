@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Library</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Rubik&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Library</h1>
+      <div class="flex">
+        <div class="form-container">
+          <button id="new-book" class="btn">NEW BOOK</button>
+          <form class="card">
+            Title: <input id="title" type="text" name="title" /><br />
+            Author: <input id="author" type="text" name="author" /><br />
+            Pages: <input id="pages" type="number" name="pages" /><br />
+            Read: <input type="radio" name="read" value="Yes" id="yes " />Yes
+            <input type="radio" name="read" value="No" id="no" checked />No
+
+            <button class="btn" id="add-book">Add book</button>
+          </form>
+        </div>
+
+        <div id="library"></div>
+      </div>
+    </div>
+    <script src="main.js" async defer></script>
+  </body>
+</html>

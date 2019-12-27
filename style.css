@@ -1,0 +1,83 @@
+* {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.flex {
+  display: flex;
+}
+
+#library {
+  margin: 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-top: 2rem;
+}
+
+form.card {
+  display: none;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card {
+  background-color: #f2f3f4;
+  width: 200px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-toggle[value="Yes"] {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-toggle[value="No"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.card > input {
+  margin: 0.5rem;
+}
+#new-book {
+  background-color: dodgerblue;
+  color: white;
+  font: bold;
+}
+
+#add-book {
+  background-color: dodgerblue;
+  color: white;
+  font: bold;
+}
