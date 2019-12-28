@@ -7,7 +7,13 @@ newBookBtn.addEventListener("click", showForm);
 
 const book1 = new Book("The Hobbit", "J.R.R Tolkien", 295, "No");
 let myLibrary = [book1];
-
+if (sessionStorage.getItem("library")) {
+  // Restore the contents of the text field
+  myLibrary = JSON.parse(sessionStorage.getItem("library"));
+} else {
+  myLibrary = [book1];
+  sessionStorage.setItem("library", JSON.stringify(myLibrary));
+}
 function toggleReadStatus(e) {
   const j = e.target.parentNode.getAttribute("data-attribute");
   console.log(j);
@@ -18,6 +24,7 @@ function toggleReadStatus(e) {
     myLibrary[j].read = "Yes";
     // e.target.innerText = "Yes";
   }
+  sessionStorage.setItem("library", JSON.stringify(myLibrary));
   console.log(myLibrary[j].read);
   render();
 }
@@ -30,6 +37,7 @@ function removeBook(e) {
   console.log(j);
   e.target.parentNode.parentNode.style.display = "none";
   myLibrary.splice(j, 1);
+  sessionStorage.setItem("library", JSON.stringify(myLibrary));
   console.log(myLibrary);
 }
 
@@ -58,6 +66,7 @@ function addBookToLibrary(e) {
   if (bookTitle !== "" && bookAuthor !== "" && bookPages !== "") {
     const book2 = new Book(bookTitle, bookAuthor, bookPages, bookRead);
     myLibrary.push(book2);
+    sessionStorage.setItem("library", JSON.stringify(myLibrary));
     render();
   } else {
     const p = document.createElement("p");
