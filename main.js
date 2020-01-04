@@ -1,3 +1,11 @@
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+}
 const libraryDiv = document.querySelector("#library");
 const formDiv = document.querySelector(".card");
 const addBookBtn = document.querySelector("#add-book");
@@ -41,20 +49,14 @@ function removeBook(e) {
   console.log(myLibrary);
 }
 
-function showForm() {
+function showForm(e) {
+  e.preventDefault();
   console.log("showform");
   if (document.querySelector("form.card").style.display == "none") {
     document.querySelector("form.card").style.display = "unset";
   } else {
     document.querySelector("form.card").style.display = "none";
   }
-}
-
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
 }
 
 function addBookToLibrary(e) {

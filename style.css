@@ -14,6 +14,7 @@
   justify-content: center;
   align-content: center;
 }
+
 .flex {
   display: flex;
 }
@@ -67,9 +68,10 @@ form.card {
   color: white;
 }
 
-.card > input {
+.card>input {
   margin: 0.5rem;
 }
+
 #new-book {
   background-color: dodgerblue;
   color: white;
